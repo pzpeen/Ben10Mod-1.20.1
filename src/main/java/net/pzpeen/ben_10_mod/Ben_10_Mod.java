@@ -15,6 +15,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.pzpeen.ben_10_mod.block.Mod_Blocks;
 import net.pzpeen.ben_10_mod.item.Mod_Creative_Tabs;
 import net.pzpeen.ben_10_mod.item.Mod_Items;
 import org.slf4j.Logger;
@@ -40,6 +41,8 @@ public class Ben_10_Mod
         MinecraftForge.EVENT_BUS.register(this);
 
         Mod_Creative_Tabs.register(modEventBus);
+
+        Mod_Blocks.register(modEventBus);
         Mod_Items.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
