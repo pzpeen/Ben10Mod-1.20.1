@@ -24,6 +24,8 @@ public class Mod_Creative_Tabs {
     public static final RegistryObject<CreativeModeTab> MATERIALS = CREATIVE_TABS.register("materials", () -> CreativeModeTab.builder().title(Component
                     .translatable("creativetab.ben_10_mod.materials")).icon(() -> new ItemStack(Mod_Blocks.STEEL_BLOCK.get()))
             .displayItems((itemDisplayParameters, output) ->{
+                output.accept(Mod_Items.STEEL.get());
+                output.accept(Mod_Items.RAW_STEEL.get());
                 output.accept(Mod_Blocks.STEEL_BLOCK.get());
 
             }).build());

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "steel",
+  "ingredient": {
+    "item": "ben_10_mod:raw_steel"
+  },
+  "result": "ben_10_mod:steel"
+}

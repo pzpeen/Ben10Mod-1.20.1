@@ -19,7 +19,8 @@ import java.util.function.Supplier;
 public class Mod_Blocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Ben_10_Mod.MODID);
 
-    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     public static <T extends Block>RegistryObject<Block> registerBlock(String name, Supplier<T> sblock){
