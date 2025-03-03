@@ -5,7 +5,14 @@
 
 
   "block.ben_10_mod.steel_block": "Bloco de Aço",
+  "block.ben_10_mod.raw_steel_block": "Block de Aço Bruto",
+
+  "block.ben_10_mod.steel_ore": "Mínerio de Aço",
+  "block.ben_10_mod.deepslate_steel_ore": "Mínerio de Aço",
+
 
   "creativetab.ben_10_mod.miscellaneous": "Variados",
-  "creativetab.ben_10_mod.materials": "Materiais"
+  "creativetab.ben_10_mod.materials": "Materiais",
+  "creativetab.ben_10_mod.nature": "Natureza"
+
 }

@@ -27,6 +27,15 @@ public class Mod_Creative_Tabs {
                 output.accept(Mod_Items.STEEL.get());
                 output.accept(Mod_Items.RAW_STEEL.get());
                 output.accept(Mod_Blocks.STEEL_BLOCK.get());
+                output.accept(Mod_Blocks.RAW_STEEL_BLOCK.get());
+
+            }).build());
+
+    public static final RegistryObject<CreativeModeTab> NATURE = CREATIVE_TABS.register("nature", () -> CreativeModeTab.builder().title(Component
+                    .translatable("creativetab.ben_10_mod.nature")).icon(() -> new ItemStack(Mod_Blocks.STEEL_ORE.get()))
+            .displayItems((itemDisplayParameters, output) ->{
+                output.accept(Mod_Blocks.STEEL_ORE.get());
+                output.accept(Mod_Blocks.DEEPSLATE_STEEL_ORE.get());
 
             }).build());
 
