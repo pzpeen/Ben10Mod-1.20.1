@@ -1,6 +1,5 @@
 package net.pzpeen.ben_10_mod.block;
 
-import net.minecraft.core.registries.Registries;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -11,7 +10,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import net.pzpeen.ben_10_mod.Ben_10_Mod;
 import net.pzpeen.ben_10_mod.item.Mod_Items;
@@ -20,6 +18,7 @@ import java.util.function.Supplier;
 
 public class Mod_Blocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Ben_10_Mod.MODID);
+
 
     public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.5F)));
@@ -30,6 +29,13 @@ public class Mod_Blocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.5F).requiresCorrectToolForDrops(), UniformInt.of(0, 2)));
     public static final RegistryObject<Block> DEEPSLATE_STEEL_ORE = registerBlock("deepslate_steel_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(3.5F).requiresCorrectToolForDrops(), UniformInt.of(0, 3)));
+
+    public static final RegistryObject<Block> REINFORCED_STONE = registerBlock("reinforced_stone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3.5F, 8F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> REINFORCED_QUARTZ_BLOCK = registerBlock("reinforced_quartz_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK).strength(3F, 6F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> REINFORCED_OBSIDIAN = registerBlock("reinforced_obsidian",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(10F, 1500F).requiresCorrectToolForDrops()));
 
 
     public static <T extends Block>RegistryObject<Block> registerBlock(String name, Supplier<T> sblock){

@@ -1,5 +1,9 @@
 {
   "item.ben_10_mod.improvised_component": "Improvised Component",
+  "item.ben_10_mod.reinforce_control": "Reinforce Control",
+  "item.ben_10_mod.weaken_control": "Weaken Control",
+
+
   "item.ben_10_mod.steel": "Steel",
   "item.ben_10_mod.raw_steel": "Raw Steel",
 
@@ -10,8 +14,13 @@
   "block.ben_10_mod.steel_ore": "Steel Ore",
   "block.ben_10_mod.deepslate_steel_ore": "Steel Ore",
 
+  "block.ben_10_mod.reinforced_stone": "Reinforced Stone",
+  "block.ben_10_mod.reinforced_quartz_block": "Reinforced Quartz Block",
+  "block.ben_10_mod.reinforced_obsidian": "Reinforced Obsidian",
+
 
   "creativetab.ben_10_mod.miscellaneous": "Miscellaneous",
   "creativetab.ben_10_mod.materials": "Materials",
-  "creativetab.ben_10_mod.nature": "Nature"
+  "creativetab.ben_10_mod.nature": "Nature",
+  "creativetab.ben_10_mod.building": "Building"
 }

@@ -1,5 +1,10 @@
 {
   "item.ben_10_mod.improvised_component": "Componente Improvisado",
+  "item.ben_10_mod.reinforce_control": "Controle de Reforço",
+  "item.ben_10_mod.weaken_control": "Controle de Enfraquecimento",
+
+
+
   "item.ben_10_mod.steel": "Aço",
   "item.ben_10_mod.raw_steel": "Aço Bruto",
 
@@ -10,9 +15,13 @@
   "block.ben_10_mod.steel_ore": "Mínerio de Aço",
   "block.ben_10_mod.deepslate_steel_ore": "Mínerio de Aço",
 
+  "block.ben_10_mod.reinforced_stone": "Pedra Reforçada",
+  "block.ben_10_mod.reinforced_quartz_block": "Bloco de Quartzo Reforçado",
+  "block.ben_10_mod.reinforced_obsidian": "Obsidiana Reforçada",
+
 
   "creativetab.ben_10_mod.miscellaneous": "Variados",
   "creativetab.ben_10_mod.materials": "Materiais",
-  "creativetab.ben_10_mod.nature": "Natureza"
-
+  "creativetab.ben_10_mod.nature": "Natureza",
+  "creativetab.ben_10_mod.building": "Construção"
 }

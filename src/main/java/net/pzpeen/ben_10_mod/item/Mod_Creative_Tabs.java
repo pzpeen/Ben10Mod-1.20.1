@@ -3,7 +3,6 @@ package net.pzpeen.ben_10_mod.item;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,6 +17,8 @@ public class Mod_Creative_Tabs {
             .translatable("creativetab.ben_10_mod.miscellaneous")).icon(() -> new ItemStack(Mod_Items.IMPROVISED_COMPONENT.get()))
             .displayItems((itemDisplayParameters, output) ->{
                     output.accept(Mod_Items.IMPROVISED_COMPONENT.get());
+                    output.accept(Mod_Items.REINFORCE_CONTROL.get());
+                    output.accept(Mod_Items.WEAKEN_CONTROL.get());
 
             }).build());
 
@@ -36,6 +37,15 @@ public class Mod_Creative_Tabs {
             .displayItems((itemDisplayParameters, output) ->{
                 output.accept(Mod_Blocks.STEEL_ORE.get());
                 output.accept(Mod_Blocks.DEEPSLATE_STEEL_ORE.get());
+
+            }).build());
+
+    public static final RegistryObject<CreativeModeTab> BUILDING = CREATIVE_TABS.register("building", () -> CreativeModeTab.builder().title(Component
+                    .translatable("creativetab.ben_10_mod.building")).icon(() -> new ItemStack(Mod_Blocks.REINFORCED_STONE.get()))
+            .displayItems((itemDisplayParameters, output) ->{
+                output.accept(Mod_Blocks.REINFORCED_STONE.get());
+                output.accept(Mod_Blocks.REINFORCED_QUARTZ_BLOCK.get());
+                output.accept(Mod_Blocks.REINFORCED_OBSIDIAN.get());
 
             }).build());
 

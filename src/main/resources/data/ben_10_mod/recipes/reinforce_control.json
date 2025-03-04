@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "ben_10_mod:steel"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "B": {
+      "item": "minecraft:stone_button"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "I": {
+      "item": "ben_10_mod:improvised_component"
+    }
+  },
+  "pattern": [
+    "OEO",
+    "SBS",
+    "RIR"
+  ],
+  "result": {
+    "item": "ben_10_mod:reinforce_control"
+  }
+}
