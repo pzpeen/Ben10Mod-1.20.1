@@ -3,6 +3,7 @@
   "item.ben_10_mod.reinforce_control": "Reinforce Control",
   "item.ben_10_mod.weaken_control": "Weaken Control",
 
+  "item.ben_10_mod.bubble_gum": "Bubble Gum",
 
   "item.ben_10_mod.steel": "Steel",
   "item.ben_10_mod.raw_steel": "Raw Steel",
@@ -17,6 +18,11 @@
   "block.ben_10_mod.reinforced_stone": "Reinforced Stone",
   "block.ben_10_mod.reinforced_quartz_block": "Reinforced Quartz Block",
   "block.ben_10_mod.reinforced_obsidian": "Reinforced Obsidian",
+
+
+  "tooltip.ben_10_mod.shift_util": "press shift",
+  "tooltip.ben_10_mod.reinforce_control": "A control that can be used to reinforce some blocks",
+  "tooltip.ben_10_mod.weaken_control": "A control that can be used to weaken some blocks",
 
 
   "creativetab.ben_10_mod.miscellaneous": "Miscellaneous",

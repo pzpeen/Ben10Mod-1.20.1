@@ -6,6 +6,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pzpeen.ben_10_mod.Ben_10_Mod;
+import net.pzpeen.ben_10_mod.item.custom.BubbleGumItem;
+import net.pzpeen.ben_10_mod.item.custom.FuelItem;
 import net.pzpeen.ben_10_mod.item.custom.ReinforceControlItem;
 import net.pzpeen.ben_10_mod.item.custom.WeakenControlItem;
 
@@ -18,6 +20,9 @@ public class Mod_Items {
             () -> new ReinforceControlItem(new Item.Properties().stacksTo(1).durability(150)));
     public static final RegistryObject<Item> WEAKEN_CONTROL = ITEMS.register("weaken_control",
             () -> new WeakenControlItem(new Item.Properties().stacksTo(1).durability(150)));
+
+    public static final RegistryObject<Item> BUBBLE_GUM = ITEMS.register("bubble_gum",
+            () -> new BubbleGumItem(new Item.Properties().food(Mod_Food.BUBBLE_GUM), 30));
 
     public static final RegistryObject<Item> STEEL = ITEMS.register("steel",
             () -> new Item(new Item.Properties()));

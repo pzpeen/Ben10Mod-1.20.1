@@ -3,6 +3,7 @@
   "item.ben_10_mod.reinforce_control": "Controle de Reforço",
   "item.ben_10_mod.weaken_control": "Controle de Enfraquecimento",
 
+  "item.ben_10_mod.bubble_gum": "Chiclete",
 
 
   "item.ben_10_mod.steel": "Aço",
@@ -18,6 +19,12 @@
   "block.ben_10_mod.reinforced_stone": "Pedra Reforçada",
   "block.ben_10_mod.reinforced_quartz_block": "Bloco de Quartzo Reforçado",
   "block.ben_10_mod.reinforced_obsidian": "Obsidiana Reforçada",
+
+
+  "tooltip.ben_10_mod.shift_util": "pressione shift",
+  "tooltip.ben_10_mod.reinforce_control": "Um controle que pode ser usado para reforçar certos blocos",
+  "tooltip.ben_10_mod.weaken_control": "Um controle que pode ser usado para enfraquecer certos blocos",
+
 
 
   "creativetab.ben_10_mod.miscellaneous": "Variados",

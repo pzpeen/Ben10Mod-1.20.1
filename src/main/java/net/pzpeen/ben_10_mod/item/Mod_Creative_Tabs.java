@@ -19,6 +19,8 @@ public class Mod_Creative_Tabs {
                     output.accept(Mod_Items.IMPROVISED_COMPONENT.get());
                     output.accept(Mod_Items.REINFORCE_CONTROL.get());
                     output.accept(Mod_Items.WEAKEN_CONTROL.get());
+                    output.accept(Mod_Items.BUBBLE_GUM.get());
+
 
             }).build());
 

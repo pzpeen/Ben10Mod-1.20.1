@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {"item": "ben_10_mod:raw_steel_block"}
+  ],
+  "result": {
+    "count": 9,
+    "item": "ben_10_mod:raw_steel"
+  }
+}
