@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pzpeen.ben_10_mod.block.Mod_Blocks;
+import net.pzpeen.ben_10_mod.datagen.Data_Generators;
 import net.pzpeen.ben_10_mod.item.Mod_Creative_Tabs;
 import net.pzpeen.ben_10_mod.item.Mod_Items;
 import org.slf4j.Logger;
@@ -39,6 +40,8 @@ public class Ben_10_Mod
         
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        modEventBus.addListener(Data_Generators::gatherData);
 
         Mod_Creative_Tabs.register(modEventBus);
 

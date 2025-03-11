@@ -1,9 +1,12 @@
 package net.pzpeen.ben_10_mod.item.custom;
 
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -15,6 +18,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.pzpeen.ben_10_mod.util.MethodsUtil;
+import net.pzpeen.ben_10_mod.util.Mod_Tags;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -22,7 +26,6 @@ import java.util.List;
 
 
 public class ReinforceControlItem extends Item {
-    static Block[] VALIDBLOCKS = {Blocks.STONE, Blocks.QUARTZ_BLOCK, Blocks.OBSIDIAN};
 
     public ReinforceControlItem(Properties pProperties) {
         super(pProperties);
@@ -36,6 +39,7 @@ public class ReinforceControlItem extends Item {
         if (!world.isClientSide){
             if(tryReinforce(blockpos, world)){
                 if (player!= null){
+                    player.playSound(SoundEvents.ANVIL_USE);
                     player.getCooldowns().addCooldown(this, 60);
                     pContext.getItemInHand().hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(entity.getUsedItemHand()));
                 }
@@ -74,10 +78,8 @@ public class ReinforceControlItem extends Item {
     }
 
     private static Block isValidBlock(BlockPos blockpos, Level world) {
-        for (Block validBlock : VALIDBLOCKS){
-            if (world.getBlockState(blockpos).is(validBlock)){
-                return world.getBlockState(blockpos).getBlock();
-            }
+        if (world.getBlockState(blockpos).is(Mod_Tags.Blocks.VALID_BLOCKS_TO_REINFORCE)){
+            return world.getBlockState(blockpos).getBlock();
         }
         return null;
     }

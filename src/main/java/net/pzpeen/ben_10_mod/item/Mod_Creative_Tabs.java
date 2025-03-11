@@ -25,7 +25,7 @@ public class Mod_Creative_Tabs {
             }).build());
 
     public static final RegistryObject<CreativeModeTab> MATERIALS = CREATIVE_TABS.register("materials", () -> CreativeModeTab.builder().title(Component
-                    .translatable("creativetab.ben_10_mod.materials")).icon(() -> new ItemStack(Mod_Blocks.STEEL_BLOCK.get()))
+                    .translatable("creativetab.ben_10_mod.materials")).icon(() -> new ItemStack(Mod_Items.STEEL.get()))
             .displayItems((itemDisplayParameters, output) ->{
                 output.accept(Mod_Items.STEEL.get());
                 output.accept(Mod_Items.RAW_STEEL.get());
@@ -48,6 +48,17 @@ public class Mod_Creative_Tabs {
                 output.accept(Mod_Blocks.REINFORCED_STONE.get());
                 output.accept(Mod_Blocks.REINFORCED_QUARTZ_BLOCK.get());
                 output.accept(Mod_Blocks.REINFORCED_OBSIDIAN.get());
+                output.accept(Mod_Blocks.STEEL_BLOCK.get());
+                output.accept(Mod_Blocks.STEEL_SLAB.get());
+                output.accept(Mod_Blocks.STEEL_STAIR.get());
+                output.accept(Mod_Blocks.STEEL_PRESSURE_PLATE.get());
+                output.accept(Mod_Blocks.STEEL_BUTTON.get());
+                output.accept(Mod_Blocks.STEEL_DOOR.get());
+                output.accept(Mod_Blocks.STEEL_TRAPDOOR.get());
+                output.accept(Mod_Blocks.STEEL_FENCE.get());
+                output.accept(Mod_Blocks.STEEL_FENCE_GATE.get());
+                output.accept(Mod_Blocks.STEEL_WALL.get());
+
 
             }).build());
 

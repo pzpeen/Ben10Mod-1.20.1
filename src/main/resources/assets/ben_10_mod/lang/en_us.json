@@ -15,6 +15,20 @@
   "block.ben_10_mod.steel_ore": "Steel Ore",
   "block.ben_10_mod.deepslate_steel_ore": "Steel Ore",
 
+  "block.ben_10_mod.steel_slab": "Steel Slab",
+  "block.ben_10_mod.steel_stair": "Steel Stair",
+
+  "block.ben_10_mod.steel_button": "Steel Button",
+  "block.ben_10_mod.steel_pressure_plate": "Steel Pressure Plate",
+
+  "block.ben_10_mod.steel_door": "Steel Door",
+  "block.ben_10_mod.steel_trapdoor": "Steel Trapdoor",
+
+  "block.ben_10_mod.steel_fence": "Steel Fence",
+  "block.ben_10_mod.steel_fence_gate": "Steel Fence Gate",
+  "block.ben_10_mod.steel_wall": "Steel Wall",
+
+
   "block.ben_10_mod.reinforced_stone": "Reinforced Stone",
   "block.ben_10_mod.reinforced_quartz_block": "Reinforced Quartz Block",
   "block.ben_10_mod.reinforced_obsidian": "Reinforced Obsidian",
