@@ -86,6 +86,78 @@ public class Mod_Recipes_Provider extends RecipeProvider {
         //Steel from Blasting
         oreBlasting(consumer, RecipeSets.STEEL_SMELTABLES, RecipeCategory.MISC, Mod_Items.STEEL.get(), 0.1F, 100, "steel");
 
+        //Steel Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
+
+        //Steel Stair
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_STAIR.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
+
+        //Steel Button
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Mod_Blocks.STEEL_BUTTON.get())
+                .requires(Mod_Items.STEEL.get())
+                .unlockedBy(getHasName(Mod_Items.STEEL.get()), has(Mod_Items.STEEL.get()))
+                .save(consumer);
+
+        //Steel Pressure Plate
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_PRESSURE_PLATE.get())
+                .pattern("##")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
+
+        //Steel Door
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_DOOR.get(), 3)
+                .pattern("##")
+                .pattern("##")
+                .pattern("##")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
+
+        //Steel Trapdoor
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_TRAPDOOR.get(), 2)
+                .pattern("#S#")
+                .pattern("###")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .define('S', Mod_Items.STEEL.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
+
+        //Steel Fence
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_FENCE.get(), 3)
+                .pattern("#S#")
+                .pattern("#S#")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .define('S', Mod_Items.STEEL.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
+
+        //Steel Fence Gate
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_FENCE_GATE.get())
+                .pattern("S#S")
+                .pattern("S#S")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .define('S', Mod_Items.STEEL.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
+
+        //Steel Wall
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Blocks.STEEL_WALL.get(), 6)
+                .pattern("###")
+                .pattern("###")
+                .define('#', Mod_Blocks.STEEL_BLOCK.get())
+                .unlockedBy(getHasName(Mod_Blocks.STEEL_BLOCK.get()), has(Mod_Blocks.STEEL_BLOCK.get()))
+                .save(consumer);
 
         //Reinforce Control
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Mod_Items.REINFORCE_CONTROL.get())
@@ -116,17 +188,25 @@ public class Mod_Recipes_Provider extends RecipeProvider {
                 .save(consumer);
     }
 
-    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
+    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients,
+                                      RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients,
+                pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
 
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients,
+                                      RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory,
+                pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
-    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
+    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer,
+                                     List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime,
+                                     String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(new ItemLike[]{itemlike}), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike)).save(pFinishedRecipeConsumer, Ben_10_Mod.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer)
+                    .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
+                    .save(pFinishedRecipeConsumer, Ben_10_Mod.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
 
     }
